@@ -1,3 +1,4 @@
+// Node implementation
 const http = require('node:http');
 const fs = require('node:fs/promises');
 
@@ -46,4 +47,4 @@ const server = http.createServer((req, res) => {
 	}
 });
 
-server.listen(8080);
+server.listen(8080, () => console.log('Server running on port 8080'));
