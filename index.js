@@ -7,7 +7,7 @@ const server = http.createServer((req, res) => {
 		switch (req.url) {
 			case '/': {
 				res.writeHead(200, { 'Content-Type': 'text/html' });
-				fs.readFile('./index.html')
+				fs.readFile('./html/index.html')
 					.then((data) => {
 						res.end(data);
 					})
@@ -16,7 +16,7 @@ const server = http.createServer((req, res) => {
 			}
 			case '/about': {
 				res.writeHead(200, { 'Content-Type': 'text/html' });
-				fs.readFile('./about.html')
+				fs.readFile('./html/about.html')
 					.then((data) => {
 						res.end(data);
 					})
@@ -25,7 +25,7 @@ const server = http.createServer((req, res) => {
 			}
 			case '/contact-me': {
 				res.writeHead(200, { 'Content-Type': 'text/html' });
-				fs.readFile('./contact-me.html')
+				fs.readFile('./html/contact-me.html')
 					.then((data) => {
 						res.end(data);
 					})
@@ -37,7 +37,7 @@ const server = http.createServer((req, res) => {
 			}
 			default: {
 				res.writeHead(404, { 'Content-Type': 'text/html' });
-				fs.readFile('./404.html')
+				fs.readFile('./html/404.html')
 					.then((data) => {
 						res.end(data);
 					})
